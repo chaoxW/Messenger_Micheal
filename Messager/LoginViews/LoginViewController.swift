@@ -2,7 +2,6 @@
 //  ViewController.swift
 //  Messager
 //
-//  Created by David Kababyan on 16/08/2020.
 //
 
 import UIKit
