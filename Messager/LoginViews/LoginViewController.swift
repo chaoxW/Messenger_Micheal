@@ -45,38 +45,38 @@ class LoginViewController: UIViewController {
 
 
     //MARK: - IBActions
-//    @IBAction func loginButtonPressed(_ sender: Any) {
-//        
-//        if isDataInputedFor(type: isLogin ? "login" : "register") {
-//            isLogin ? loginUser() : registerUser()
-//        } else {
-//            ProgressHUD.showFailed("All Fields are required")
-//        }
-//    }
+    @IBAction func loginButtonPressed(_ sender: Any) {
+        
+        if isDataInputedFor(type: isLogin ? "login" : "register") {
+            isLogin ? loginUser() : registerUser()
+        } else {
+            ProgressHUD.showFailed("All Fields are required")
+        }
+    }
     
-//    @IBAction func forgotPasswordButtonPressed(_ sender: Any) {
-//
-//        if isDataInputedFor(type: "password") {
-//            resetPassword()
-//        } else {
-//            ProgressHUD.showFailed("Email is required.")
-//        }
-//
-//    }
+    @IBAction func forgotPasswordButtonPressed(_ sender: Any) {
+
+        if isDataInputedFor(type: "password") {
+            resetPassword()
+        } else {
+            ProgressHUD.showFailed("Email is required.")
+        }
+
+    }
     
     
-//    @IBAction func resendEmailButtonPressed(_ sender: Any) {
-//        if isDataInputedFor(type: "password") {
-//            resendVerificationEmail()
-//        } else {
-//            ProgressHUD.showFailed("Email is required.")
-//        }
-//    }
+    @IBAction func resendEmailButtonPressed(_ sender: Any) {
+        if isDataInputedFor(type: "password") {
+            resendVerificationEmail()
+        } else {
+            ProgressHUD.showFailed("Email is required.")
+        }
+    }
     
-//    @IBAction func signUpButtonPressed(_ sender: UIButton) {
-//        updateUIFor(login: sender.titleLabel?.text == "Login")
-//        isLogin.toggle()
-//    }
+    @IBAction func signUpButtonPressed(_ sender: UIButton) {
+        updateUIFor(login: sender.titleLabel?.text == "Login")
+        isLogin.toggle()
+    }
     
     //MARK: - Setup
     private func setupTextFieldDelegates() {
@@ -146,7 +146,7 @@ class LoginViewController: UIViewController {
         
     }
     
-//    private func loginUser() {
+    private func loginUser() {
 //        FirebaseUserListener.shared.loginUserWithEmail(email: emailTextField.text!, password: passwordTextField.text!) { (error, isEmailVerified) in
 //
 //            if error == nil {
@@ -162,10 +162,10 @@ class LoginViewController: UIViewController {
 //            }
 //
 //        }
-//    }
+    }
 
-//    private func registerUser() {
-//
+    private func registerUser() {
+
 //        if passwordTextField.text! == repeatPasswordTextField.text! {
 //
 //            FirebaseUserListener.shared.registerUserWith(email: emailTextField.text!, password: passwordTextField.text!) { (error) in
@@ -181,10 +181,10 @@ class LoginViewController: UIViewController {
 //        } else {
 //            ProgressHUD.showFailed("The Passwords don't match")
 //        }
-//    }
+    }
     
     
-//    private func resetPassword() {
+    private func resetPassword() {
 //        FirebaseUserListener.shared.resetPasswordFor(email: emailTextField.text!) { (error) in
 //
 //            if error == nil {
@@ -193,9 +193,9 @@ class LoginViewController: UIViewController {
 //                ProgressHUD.showFailed(error!.localizedDescription)
 //            }
 //        }
-//    }
+    }
     
-//    private func resendVerificationEmail() {
+    private func resendVerificationEmail() {
 //        FirebaseUserListener.shared.resendVerificationEmail(email: emailTextField.text!) { (error) in
 //
 //            if error == nil {
@@ -205,7 +205,7 @@ class LoginViewController: UIViewController {
 //                print(error!.localizedDescription)
 //            }
 //        }
-//    }
+    }
     
     //MARK: - Navigation
     private func goToApp() {
